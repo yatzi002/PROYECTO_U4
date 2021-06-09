@@ -1,0 +1,74 @@
+{%load static%}
+  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title> ITPA | Login </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+<meta name="descripcion" content="Sistema para el manejo de talleres en el Instituto Tecnológico de Pabellón de Arteaga">
+<meta name="author" content="Jaqueline GL & Yatziri ES">
+<meta name="keywords" content="Programación web">
+<link rel="stylesheet" type="text/css" href="{% static 'estilo/css/bootstrap.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'estilo/css/style.css'%}">
+<script type="text/javascript" src="{% static 'estilo/js/mijavascript.js'%}"></script>
+<script type="text/javascript" src="{% static 'estilo/js/bootstrap.js'%}"></script>
+</head>
+
+<section class="header">
+	<nav>
+		<a href="index"><img src="{% static 'imagenes/logo.png'%}"></a>
+	</nav>
+<div class="text-box">
+	<h1>Bienvenido profesor</h1>
+	<br>
+	<p>Ingresa tus datos para acceder a las listas de tus alumnos. </p>
+</div>	
+</section>
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4 col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-xl-4 offset-xl-4 col-xxl-4 offset-xxl-4">
+      {% csrf_token %}
+      <form class="login-admin" action="{% url 'adminTalleres_view' %}" method="get" target="_blank">
+        
+      	<div class="form-group">
+          <label for="usuario">Usuario (ID)</label>
+          <input  class="form-control" type="number" name="id" value="Ingresa tu ID" required>
+          {{form.username}}
+         </div><br>
+         <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input  class="form-control" type="password" name="contraseña" required>
+          {{form.password}}
+         </div><br>
+
+          <center><button type="submit" class="btn btn-primary" >Acceder</button></center>
+
+      </form><br><br><br>
+    </div>
+   </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: #F4F4F4">
+    Instituto Tecnológico de Pabellón de Arteaga | Todos los derechos reservados
+  </div>
+</footer>
+
+
+</body>
+
+</html> 

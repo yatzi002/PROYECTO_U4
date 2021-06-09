@@ -1,0 +1,110 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title> ITPA | Talleres </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+<meta name="descripcion" content="Sistema para el manejo de talleres en el Instituto Tecnológico de Pabellón de Arteaga">
+<meta name="author" content="Jaqueline GL & Yatziri ES">
+<meta name="keywords" content="Programación web">
+<link rel="stylesheet" type="text/css" href="{% static 'estilo/css/bootstrap.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'estilo/css/style.css'%}">
+<script type="text/javascript" src="{% static 'estilo/js/mijavascript.js'%}"></script>
+<script type="text/javascript" src="{% static 'estilo/js/bootstrap.js'%}"></script>
+
+</head>
+
+<section class="header">
+	<nav>
+		<a href="index"><img src="{% static 'imagenes/logo.png'%}"></a>
+		<div class="navbar-links">
+			<ul>
+				<li><a href="{% url 'login_view' %}">INGRESAR</a></li>
+			</ul>
+		</div>
+	</nav>
+<div class="text-box">
+	<h1>Talleres ITPA</h1>
+	<br>
+	<p>Bienvenido a la serie de talleres que puedes cursar para la liberación de créditos deportivos y culturales</p>
+</div>	
+</section>
+
+<section class="talleres">
+<h1>Talleres activos</h1>
+<br><br><br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'imagenes/imagen3.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Lectura</h5>
+        <p class="card-text">Todo taller de lectura tiene su razón de ser. Inscríbete al taller y acredítalo para liberación de un crédito cultural.</p>
+        <a href="{% url 'formulario_view' %}" class="btn btn-primary">Registrame</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'imagenes/imagen2.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Baile</h5>
+        <p class="card-text">La práctica es la base y la constante en este taller podrás vivir todas nuestras clases en la experiencia de bailar y obtener un crédito cultural.</p>
+        <a href="{% url 'formulario_view' %}" class="btn btn-primary">Registrame</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'imagenes/imagen1.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Ajedrez</h5>
+        <p class="card-text">Este taller permitirá a los alumnos aproximarse a la belleza y complejidad del ajedrez. Intégrate para la liberación de un crédito cultural.</p>
+        <a href="{% url 'formulario_view' %}" class="btn btn-primary">Registrame</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'imagenes/imagen4.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Futbol</h5>
+        <p class="card-text">El deporte conserva y mejora la salud física y psíquica. Taller de futbol para liberación de crédito deportivo.</p>
+        <a href="{% url 'formulario_view' %}" class="btn btn-primary">Registrame</a>
+      </div>
+    </div>
+  </div>
+   <div class="col">
+    <div class="card">
+      <img src="{% static 'imagenes/imagen5.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Voleibol</h5>
+        <p class="card-text">El Voleibol es un juego extremadamente lógico y racional. Taller de voleibol para liberación de crédito deportivo.</p>
+        <a href="{% url 'formulario_view' %}" class="btn btn-primary">Registrame</a>
+      </div>
+    </div>
+  </div>
+   <div class="col">
+    <div class="card">
+      <img src="{% static 'imagenes/imagen6.jpeg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Basquetbol</h5>
+        <p class="card-text">El baloncesto es un deporte apasionante. Taller para liberación de crédito deportivo.</p>
+        <a href="{% url 'formulario_view' %}" class="btn btn-primary">Registrame</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<br><br><br>
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: #F4F4F4">
+    Instituto Tecnológico de Pabellón de Arteaga | Todos los derechos reservados
+  </div>
+</footer> 
+
+
+</body>
+
+</html> 

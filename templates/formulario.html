@@ -1,0 +1,103 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title> ITPA | Inscripción </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+<meta name="descripcion" content="Sistema para el manejo de talleres en el Instituto Tecnológico de Pabellón de Arteaga">
+<meta name="author" content="Jaqueline GL & Yatziri ES">
+<meta name="keywords" content="Programación web">
+<link rel="stylesheet" type="text/css" href="{% static 'estilo/css/bootstrap.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'estilo/css/style.css'%}">
+<script type="text/javascript" src="{% static 'estilo/js/mijavascript.js'%}"></script>
+<script type="text/javascript" src="{% static 'estilo/js/bootstrap.js'%}"></script>
+
+</head>
+
+<section class="header">
+  <nav>
+    <a href="index"><img src="{% static 'imagenes/logo.png'%}"></a>
+  </nav>
+<div class="text-box">
+  <h1>Inscríbete</h1>
+  <br>
+  <p>Llena el formulario con tus datos </p>
+</div>  
+</section>
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4 col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-xl-4 offset-xl-4 col-xxl-4 offset-xxl-4">
+      <form class="formulario-datos-usuario" action="{% url 'index_view' %}" method="get" target="_blank">
+
+         <div class="form-group">
+          <label for="num-control">Número de control</label>
+          <input  class="form-control" type="number" name="num-control" value="" required>
+         </div><br>
+
+           <div class="form-group">
+           <label for="taller">Confirma tu taller</label>
+            <select class="form-select" id="taller" name="taller" required>
+        <option selected></option>
+            <option value="Aguascalientes">Lectura</option>
+            <option value="Baja California">Baile</option>
+            <option value="Baja California Sur">Ajedrez</option>
+            <option value="Campeche">Futbol</option>
+            <option value="Chiapas">Voleibol</option>
+            <option value="Chihuahua">Basquetbol</option>
+      </select>
+          
+        </div><br>
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input  class="form-control" type="text" name="nombre" value="" required >
+        </div><br>
+
+        <div class="form-group">
+          <label for="apellido_p">Apellido paterno</label>
+          <input  class="form-control" type="text" name="apellido_p" value="" >
+        </div><br>
+
+        <div class="form-group">
+          <label for="apellido_m">Apellido materno</label>
+          <input  class="form-control" type="text" name="apellido_m" value="" >
+        </div><br>
+        
+        <div class="form-group">
+          <label for="carrera">Carrera</label>
+          <input  class="form-control" type="text" name="carrera" value="" >
+        </div><br>
+
+         <div class="form-group">
+          <label for="grupo">Grupo</label>
+          <input  class="form-control" type="text" name="grupo" value="" >
+        </div><br>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" name="direccion-correo-electronico" minlength="8" maxlength="32" value="" required>
+        </div><br>
+
+        <div class="form-group">
+          <label for="telefono" class="form-label">Número de teléfono</label>
+          <input type="number" class="form-control" name="num_telefono" minlength="8" maxlength="32" value="" required>
+        </div><br><br>
+
+
+
+  <center><button type="submit" class="btn btn-primary">Enviar</button></center>
+    </form><br><br><br>
+ </div>  
+
+  
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: #F4F4F4">
+    Instituto Tecnológico de Pabellón de Arteaga | Todos los derechos reservados
+  </div>
+</footer>
+
+</body>
+
+</html> 
